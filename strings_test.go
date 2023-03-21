@@ -15,6 +15,8 @@ func TestReverseString(t *testing.T) {
 		{"Even length string", "hello", "olleh"},
 		{"Odd length string", "world", "dlrow"},
 		{"String with spaces", "hello world", "dlrow olleh"},
+		{"Non ASCII string", "привет, мир", "рим ,тевирп"},
+		{"String with escape sequence", "привет, мир\n", "\nрим ,тевирп"},
 	}
 
 	for _, testCase := range testCases {
