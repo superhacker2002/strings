@@ -1,19 +1,24 @@
 package strings
 
 import (
-	"fmt"
 	"testing"
 )
 
 func TestReverseString(t *testing.T) {
 	testCases := []struct {
-		input    string
-		expected string
+		name           string
+		input          string
+		expectedOutput string
 	}{
-		{input: "hello world", expected: "dlrow olleh"},
+		{"Empty string", "", ""},
+		{"Single character string", "a", "a"},
+		{"Even length string", "hello", "olleh"},
+		{"Odd length string", "world", "dlrow"},
+		{"String with spaces", "hello world", "dlrow olleh"},
 	}
+
 	for _, testCase := range testCases {
-		t.Run(testCase.input, testReverseStringFunc(testCase.input, testCase.expected))
+		t.Run(testCase.name, testReverseStringFunc(testCase.input, testCase.expectedOutput))
 	}
 }
 
@@ -21,7 +26,7 @@ func testReverseStringFunc(input string, expected string) func(*testing.T) {
 	return func(t *testing.T) {
 		actual := ReverseString(input)
 		if actual != expected {
-			t.Errorf(fmt.Sprintf("Expected reversed string to be %s but instead got %s!", expected, actual))
+			t.Errorf("ReverseString(%q) = %q; expected %q", input, actual, expected)
 		}
 	}
 }
