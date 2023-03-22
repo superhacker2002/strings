@@ -3,5 +3,5 @@ This repository contains Go module with functions for string reversal and counti
 
 ## Installation and usage
 1. Run `go get gihub.com/superhacker2002/strings` in order to load module and set up dependencies.
-2. Import `"gihub.com/superhacker2002/strings"` into your programming.
+2. Import `"gihub.com/superhacker2002/strings"` into your programm.
 3. Enjoy.
