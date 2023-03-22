@@ -1,5 +1,5 @@
 # Strings library
-This repository contains Go module with functions for for string reversal and counting characters in it.
+This repository contains Go module with functions for string reversal and counting characters in it.
 
 ## Installation and usage
 1. Run `go get gihub.com/superhacker2002/strings` in order to load module and set up dependencies.
