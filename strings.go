@@ -7,3 +7,11 @@ func ReverseString(str string) string {
 	}
 	return string(byteString)
 }
+
+func CharactersCount(str string) int {
+	var n int
+	for range str {
+		n++
+	}
+	return n
+}
